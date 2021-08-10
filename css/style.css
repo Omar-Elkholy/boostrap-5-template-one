@@ -93,6 +93,9 @@ body{
     background-color: inherit !important;
     color: var(--mainColor)!important;
 }
+.navbar i{
+    font-size: 22px;
+}
 
 /* Line Transition */
 .navbar .collapse > ul > li a::before{
@@ -164,7 +167,8 @@ body{
     height: 0.75rem;
 }
 .about p{
-    font-weight: 200;
+    font-weight: 300;
+    color: #4e4e4e;
 }
 .about h5{
     position: relative;
@@ -311,12 +315,10 @@ body{
 
 /* Start Testimonial Section */
 
-.testi .carsouelContainer{
-    min-height: 607px;
+.testi {
     background-image: url('../Image/overlay-bg.jpg');
     background-position: center;
     background-size: cover;
-    position: relative;
     background-attachment: fixed;
 }
 
@@ -331,37 +333,28 @@ body{
 
 }
 
-.carousel-caption{
-    top: 45%;
-    transform: translateY(-50%);
-}
-
-.carousel-indicators{
-    top: 75%;
-}
-.carousel-caption h5{
+.testi .carousel h2{
     font-size: 22.4px;
-}
-.carousel-caption p{
-    font-size: 20px;
-    opacity: .8;
-}
+    color: #fff;
 
+}
+.testi .carousel p{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+}
+@media (max-width: 767px) {
+    .testi .carousel p{
+        width: 100% !important;
+    }
+}
 .carousel-indicators [data-bs-target]{
     width: 12px;
     height: 12px;
     margin: 0 4px;
 }
 
-.buttonContainer{
-    height: 50px;
-}
 
-@media (max-width: 576px){
-    .carousel-indicators{
-        top: 90%;
-    }
-}
 
 /* End Testimonial Section */
 

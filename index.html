@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/all.min.css">
   <!-- Link  Style Css File -->
   <link rel="stylesheet" href="css/style.css">
-  
+
 </head>
 
 <body>
@@ -32,7 +32,7 @@
       <!-- Toggle Button -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <i class="fas fa-bars text-white"></i>
       </button>
 
       <!-- Right Section -->
@@ -61,7 +61,11 @@
             </a>
             <ul class="dropDown dropdown-menu fs-6 px-4 py-3 text-capitalize" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="#">Drop Down 1</a></li>
-              <li><a class="dropdown-item" href="#">Deep Drop Down</a></li>
+
+              <li class="dropend">
+                <a class="dropdown-item dropdown-toggle" href="#">Deep Drop Down</a>
+              </li>
+
               <li><a class="dropdown-item" href="#">Drop Down 2</a></li>
               <li><a class="dropdown-item" href="#">Drop Down 3</a></li>
               <li><a class="dropdown-item" href="#">Drop Down 4 </a></li>
@@ -450,55 +454,45 @@
 
   <!-- Start Testimonial Section -->
 
-  <section class="testi container-fluid p-0">
+  <section class="testi container-fluid p-0 position-relative">
+    <div class="overlay"></div>
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="5000">
-
-          <!-- Using This Container Instead Of The Image -->
-          <div class="carsouelContainer">
-            <div class="overlay"></div>
-          </div>
-
-          <!-- Carsouel Item 1 -->
-          <div class="carousel-caption d-block">
-            <img src="Image/testimonial-2.jpg" class="rounded-circle" alt="">
-            <h5 class="text-uppercase my-3">xavi alonso</h5>
-            <p class="mb-3">
-              Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.
-            </p>
-          </div>
+    <div class="container py-5">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
+            class="rounded-circle"></button>
         </div>
 
-        <!-- Carsouel Item 2 -->
-        <div class="carousel-item" data-bs-interval="3000">
-          <div class="carsouelContainer">
-            <div class="overlay"></div>
+        <div class="carousel-inner">
+          <!-- Item 1 -->
+          <div class="carousel-item active">
+            <div class="carousel-item1 d-flex align-items-center justify-content-center flex-column py-5">
+              <img src="Image/testimonial-4.jpg" class="rounded-circle" alt="">
+              <h2 class="text-uppercase my-3">marta scorate</h2>
+              <p class="text-center px-lg-3 w-75">
+                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+              </p>
+            </div>
           </div>
-          <div class="carousel-caption d-block">
-            <img src="Image/testimonial-4.jpg" class="rounded-circle" alt="">
-            <h5 class="text-uppercase my-3">marta scorate</h5>
-            <p class="mb-3">
-              Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.
-            </p>
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <div class="carousel-item1 d-flex align-items-center justify-content-center flex-column py-5">
+              <img src="Image/testimonial-2.jpg" class="rounded-circle" alt="">
+              <h2 class="text-uppercase my-3">marta scorate</h2>
+              <p class="text-center px-lg-3 w-75">
+                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Carsouel Switch Buttons -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-          class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
-        <button class="rounded-circle" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
+        </div>
       </div>
     </div>
-
-
   </section>
 
   <!-- End Testimonial Section -->
@@ -517,7 +511,7 @@
       </div>
 
       <div class="row row-cols-1 row-cols-md-3 g-4 pb-0 pb-md-5">
-        
+
         <!-- Item 1 -->
         <div class="col">
           <div class="card h-100">
@@ -658,7 +652,8 @@
                   aria-describedby="emailHelp">
               </div>
               <div class="mb-3">
-                <input type="password" placeholder="Your Email" class="form-control px-3 py-2" id="exampleInputPassword1">
+                <input type="password" placeholder="Your Email" class="form-control px-3 py-2"
+                  id="exampleInputPassword1">
               </div>
               <div class="mb-3">
                 <input type="password" placeholder="Subject" class="form-control px-3 py-2" id="exampleInputPassword1">
@@ -667,7 +662,9 @@
                 <textarea class="form-control px-3 py-2" placeholder="Message" id="exampleFormControlTextarea1" rows="3"
                   cols=""></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-lg rounded-pill position-relative start-50 translate-middle-x mt-3">Send Message</button>
+              <button type="submit"
+                class="btn btn-primary btn-lg rounded-pill position-relative start-50 translate-middle-x mt-3">Send
+                Message</button>
             </form>
           </div>
 
@@ -680,7 +677,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem expedita
               aperiam aliquid at. Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis mollitia
               inventore?</p>
-            
+
             <!-- Contact List -->
             <div class="contactList">
               <div><i class="fas fa-map-marker-alt fa-fw"></i>329 WASHINGTON ST BOSTON, MA 02108</div>
@@ -747,17 +744,17 @@
   <!-- Code For Typing Animation -->
   <script>
     var typed = new Typed('.typed', {
-    strings: [ 
-      'Designer',
-      'Developer',
-      'Freelancer',
-      'Photographer'
-    ],
-    typeSpeed: 100,
-    backSpeed: 50,
-    backDelay: 2100,
-    loop: true,
-    smartBackspace: true,
+      strings: [
+        'Designer',
+        'Developer',
+        'Freelancer',
+        'Photographer'
+      ],
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2100,
+      loop: true,
+      smartBackspace: true,
     });
   </script>
 
